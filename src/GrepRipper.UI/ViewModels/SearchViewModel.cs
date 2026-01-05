@@ -111,11 +111,12 @@ public class SearchViewModel : ValidatableBindableBase
     
     public SearchViewModel()
     {
-        this.Directory = Environment.CurrentDirectory;
+        this.Directory = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
         this.IncludeSubDirectories = true;
         this.FilePatternsSpaceSeparated = "*";
         this.SkipBinaryFiles = true;
-        this.SearchPatternIsRegex = true;
+        this.SearchPatternIsRegex = false;
+        this.IgnoreCase = true;
         this.ContextLineCount = 0;
         this.Operation = new SearchOperationViewModel();
         this.RunSearchCommand = new DelegateCommand(this.RunSearchIfValid);
