@@ -93,4 +93,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: Application
-        path: src\GrepRipper.UI\bin\x64\Release\net8.0-windows\win-x64\publish\win-x64
+        path: src\GrepRipper.UI\bin\x64\Release\net8.0-windows\win-x64\publish
